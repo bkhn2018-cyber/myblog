@@ -1,16 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Blog của Dat</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Blog của Dat</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Chào mừng đến blog của tôi</h1>
+  <div class="header">
+    <div class="info-me">
+      <div class="about-me" onclick="loadPage('about.html')">About me</div>
+      <div class="contact-me" onclick="loadPage('contact.html')">Contact me</div>
+    </div>
+    <p>Hi! I'm Dat, from Viet Nam</p>
+  </div>
+  <div>
+    <div class="left-bar">
+      <div class="topic" onclick="loadPage('articles.html')"><p class="topic-name">Articles</p></div>
+      <div class="topic" onclick="loadPage('book-notes.html')"><p class="topic-name">Book notes</p></div>
+      <div class="topic" onclick="loadPage('movies.html')"><p class="topic-name">Movies I've watched</p></div>
+      <div class="topic" onclick="loadPage('songs.html')"><p class="topic-name">Songs I like</p></div>
+      <div class="topic" onclick="loadPage('photos.html')"><p class="topic-name">Photos of me</p></div>
+
+      <!-- <div>Web 3</div>
+      <div>Bitcoin and ETH</div>
+      <div>My travel</div>
+      <div>Football</div>
+      <div>Spanish</div> -->
+      
+    </div>
+    <div class="content" id="content">content</div>
+    <div class="right-bar">right bar</div>
+  </div>
+
+  <script>
+    function loadPage(page) {
+    fetch(page)
+        .then(res => {
+            console.log(res);
+            return res.text();
+        })
+        .then(html => {
+            document.getElementById('content').innerHTML = html;
+        })
+        .catch(error => {
+            console.error(error);
+        });
+    }
+  </script>
+</body>
+</html>
+
+    <!-- <h1>Chào mừng đến blog của tôi</h1>
     <p>Bài viết đầu tiên.</p>
     <p>Người đàn ông bản lĩnh luôn biết cách đầu tư cho chính mình.
     Chỉ cần tập trung vào 5 việc: tập thể dục, kiếm tiền, ngủ đủ, ăn uống đủ chất và giữ tinh thần tích cực. 
-    Hãy học cách chăm sóc bản thân, vóc dáng và sự nghiệp, những chuyện linh tinh khác không cần bận tâm. 
-    Sống chất là khi bạn biết điều gì là quan trọng nhất!</p>
-</body>
-</html>
+    Hãy học cách chăm sóc bản thân, vóc dáng và sự nghiệp 
+    </p>
+  

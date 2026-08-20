@@ -1,5 +1,74 @@
 body {
-    max-width: 800px;
-    margin: auto;
-    font-family: Arial, sans-serif;
+    width: 1000px;
+    margin-top: 0px;
+    margin-left: 100px;
+}
+
+.header{
+    background-color: lightcoral;
+    height: 100px;
+    width: 100%;
+    position: relative;
+    vertical-align: top;
+}
+
+.header p{
+    margin: 0;
+}
+
+.info-me{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+
+.about-me{
+    display: inline-block;
+    background-color: bisque;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.contact-me{
+    display: inline-block;
+    background-color: lightseagreen;
+}
+
+
+.left-bar{
+    display: inline-block;
+    background-color: lightgreen;
+    width: 200px;
+    height: 100%;
+    vertical-align: top;
+}
+
+.content{
+    display: inline-block;
+    background-color: lightskyblue;
+    width: 700px;
+    vertical-align: top;
+}
+
+.right-bar{
+    display: inline-block;
+    background-color: lightslategray;
+    height: 1000px;
+    vertical-align: top;
+}
+
+.topic{
+    height: 30px;
+    cursor: pointer;
+    background-color: rgb(210, 210, 193);
+}
+
+.topic:hover{
+    background-color: rgb(252, 252, 251);
+}
+
+.topic-name{
+    margin: 3px;
+    padding: 5px;
+    font: 18px Arial, Helvetica, sans-serif;
 }
